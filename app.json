@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "PrismaU",
+    "slug": "PrismaU-Club",
+    "version": "12.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/img/logo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "assets/img/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff",
+      "imageBackgroundResizeMode": "center",
+      "fadeOutDuration": 300,
+      "fadeInDuration": 500
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Esta aplicación requiere acceso a la cámara para escanear códigos QR como parte de sus funcionalidades principales.",
+        "ITSAppUsesNonExemptEncryption": false,
+        "UISupportedInterfaceOrientations": [
+          "UIInterfaceOrientationPortrait",
+          "UIInterfaceOrientationPortraitUpsideDown",
+          "UIInterfaceOrientationLandscapeLeft",
+          "UIInterfaceOrientationLandscapeRight"
+        ],
+        "UISupportedInterfaceOrientations~ipad": []
+      },
+      "bundleIdentifier": "co.ticsoft.prismauidentidad"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/img/logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.ticsoftdev.PrismaUIdClub",
+      "googleServicesFile": "./google-services.json",
+      "versionCode": 12
+    },
+    "web": {
+      "favicon": "./assets/img/logo.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1db1ae9c-d874-47c2-b5d2-061e243bfff4"
+      }
+    },
+    "plugins": [
+      "expo-font",
+      "expo-notifications"
+    ]
+  }
+}
