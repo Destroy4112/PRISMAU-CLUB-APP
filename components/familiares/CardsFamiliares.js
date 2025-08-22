@@ -2,7 +2,7 @@ import { ActivityIndicator, Image, Text, View } from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import tw from 'tailwind-react-native-classnames';
 import imagenes from '../../assets/img/imagenes';
-import { servidorBack } from '../../routes/Routes';
+import { URL_BACK } from '../../models/endpoints/endpoints.model';
 
 export default function CardsFamiliares({ familiares, isLoading }) {
 
@@ -42,7 +42,7 @@ export default function CardsFamiliares({ familiares, isLoading }) {
                             >
                                 <View style={tw`mr-4`}>
                                     <Image
-                                        source={item.imagen ? { uri: servidorBack + item.imagen } : imagenes.avatar}
+                                        source={item.imagen ? { uri: URL_BACK + item.imagen } : imagenes.avatar}
                                         style={tw`w-16 h-16 rounded-full border-2 border-gray-300`}
                                         resizeMode='cover'
                                     />

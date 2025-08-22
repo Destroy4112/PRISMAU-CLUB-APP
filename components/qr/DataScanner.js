@@ -1,9 +1,8 @@
-import React from 'react';
 import { Image, ScrollView, Text, View } from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import tw from 'tailwind-react-native-classnames';
 import imagenes from '../../assets/img/imagenes';
-import { servidorBack } from '../../routes/Routes';
+import { URL_BACK } from '../../models/endpoints/endpoints.model';
 
 
 export default function DataScanner({ data, rol }) {
@@ -14,7 +13,7 @@ export default function DataScanner({ data, rol }) {
                 <View style={tw`items-center p-6 bg-green-400 rounded-t-lg mx-1 shadow`}>
                     <View style={tw`w-32 h-32 rounded-full bg-gray-200 items-center justify-center shadow-md`}>
                         <Image
-                            source={data.imagen ? { uri: servidorBack + data.imagen } : imagenes.avatar}
+                            source={data.imagen ? { uri: URL_BACK + data.imagen } : imagenes.avatar}
                             style={tw`w-28 h-28 rounded-full`}
                         />
                     </View>

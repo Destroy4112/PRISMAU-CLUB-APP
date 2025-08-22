@@ -30,5 +30,3 @@ export const Routes = {
     CUOTASBAILES: 'CuotasBaile',
     SOCIOS: 'Socios',
 }
-
-export const servidorBack = "https://www.apiclubsincelejo.prismau.co";

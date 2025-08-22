@@ -23,5 +23,5 @@ export const ENDPOINTS = {
     USUARIO: 'usuario/'
 }
 
-// export const URL_BACK = "https://7521e373d41f.ngrok-free.app";
+// export const URL_BACK = "https://9d7d7022f349.ngrok-free.app";
 export const URL_BACK = "https://apiclubsincelejo.prismau.com.co";

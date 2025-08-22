@@ -3,7 +3,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import tw from 'tailwind-react-native-classnames';
 import imagenes from '../../assets/img/imagenes';
 import { useAuthContext } from '../../context/AuthContext';
-import { servidorBack } from '../../routes/Routes';
+import { URL_BACK } from '../../models/endpoints/endpoints.model';
 
 const FormProfile = ({ toggleModal }) => {
     const { user } = useAuthContext();
@@ -13,7 +13,7 @@ const FormProfile = ({ toggleModal }) => {
             <View style={tw`items-center p-5 bg-green-400`}>
                 <View style={tw`w-32 h-32 rounded-full bg-gray-200 items-center justify-center shadow-md`}>
                     <Image
-                        source={user.imagen ? { uri: servidorBack + user.imagen } : imagenes.avatar}
+                        source={user.imagen ? { uri: URL_BACK + user.imagen } : imagenes.avatar}
                         style={tw`w-28 h-28 rounded-full`}
                     />
                 </View>

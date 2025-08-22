@@ -1,12 +1,11 @@
 import { FontAwesome5 } from '@expo/vector-icons'
 import { format, parse } from 'date-fns'
 import { es } from 'date-fns/locale'
-import React from 'react'
 import { ActivityIndicator, Image, ScrollView, Text, TouchableOpacity, View } from 'react-native'
 import { DataTable } from 'react-native-paper'
 import tw from 'tailwind-react-native-classnames'
 import imagenes from '../../assets/img/imagenes'
-import { servidorBack } from '../../routes/Routes'
+import { URL_BACK } from '../../models/endpoints/endpoints.model'
 
 const DataReservas = ({ page, setPage, totalPages, reservas, isLoading, cancelar }) => {
 
@@ -38,7 +37,7 @@ const DataReservas = ({ page, setPage, totalPages, reservas, isLoading, cancelar
                                 <ScrollView>
                                     {reservas.map((reserva) => (
                                         <View style={tw`bg-white rounded-lg shadow-md p-4 mb-4`} key={reserva.id}>
-                                            <Image source={reserva.espacio.imagen ? { uri: servidorBack + reserva.espacio.imagen } : imagenes.logoPrisma} style={tw`w-full h-40 rounded-lg`} />
+                                            <Image source={reserva.espacio.imagen ? { uri: URL_BACK + reserva.espacio.imagen } : imagenes.logoPrisma} style={tw`w-full h-40 rounded-lg`} />
                                             <Text style={tw`text-lg font-bold mt-3`}>{reserva.espacio.Descripcion}</Text>
                                             <View style={tw`flex-row items-center mt-3`}>
                                                 <FontAwesome5 name="calendar-alt" size={15} style={tw`text-gray-700 mr-3`} />

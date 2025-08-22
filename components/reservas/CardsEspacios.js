@@ -1,13 +1,12 @@
-import React from 'react';
-import { ActivityIndicator, Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { DataTable } from 'react-native-paper';
 import tw from 'tailwind-react-native-classnames';
 import imagenes from '../../assets/img/imagenes';
-import { servidorBack } from '../../routes/Routes';
+import { URL_BACK } from '../../models/endpoints/endpoints.model';
 
 export default function CardsEspacios({ page, setPage, totalPages, espacios, isLoading, onSelect }) {
 
-    
+
 
     return (
         <>
@@ -26,7 +25,7 @@ export default function CardsEspacios({ page, setPage, totalPages, espacios, isL
                         {espacios.map((espacio, index) => (
                             <TouchableOpacity key={index} onPress={() => onSelect(espacio)}>
                                 <View style={tw`bg-white rounded-lg overflow-hidden shadow-md mb-1`}>
-                                    <Image source={espacio.imagen ? { uri: servidorBack + espacio.imagen } : imagenes.logoPrisma} style={tw`${espacio.imagen ? "w-full" : "w-40"} h-40`} />
+                                    <Image source={espacio.imagen ? { uri: URL_BACK + espacio.imagen } : imagenes.logoPrisma} style={tw`${espacio.imagen ? "w-full" : "w-40"} h-40`} />
                                     <View style={tw`p-4`}>
                                         <Text style={tw`text-lg font-semibold mb-2`}>{espacio.Descripcion}</Text>
                                     </View>

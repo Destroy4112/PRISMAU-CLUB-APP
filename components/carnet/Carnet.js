@@ -1,11 +1,10 @@
-import React from "react";
 import { Image, ScrollView, Text, View } from "react-native";
 import QRCode from "react-native-qrcode-svg";
 import Svg, { Text as SvgText } from "react-native-svg";
 import tw from "tailwind-react-native-classnames";
 import imagenes from "../../assets/img/imagenes";
 import { styles } from "../../assets/styles/Carnet";
-import { servidorBack } from "../../routes/Routes";
+import { URL_BACK } from "../../models/endpoints/endpoints.model";
 
 export default function Carnet({ user, primerNombre, primerApellido, rol, data, }) {
 
@@ -57,7 +56,7 @@ export default function Carnet({ user, primerNombre, primerApellido, rol, data, 
             <View style={tw`items-center mt-10 mb-6`}>
               {user.imagen ? (
                 <Image
-                  source={{ uri: servidorBack + user.imagen }}
+                  source={{ uri: URL_BACK + user.imagen }}
                   style={tw`h-36 w-36 rounded-full`}
                 />
               ) : (
