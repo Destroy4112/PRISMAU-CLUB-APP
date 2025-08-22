@@ -33,3 +33,6 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+club-prismau-firebase-adminsdk-fbsvc-6d5d1cd834.json
+google-services.json

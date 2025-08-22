@@ -9,7 +9,7 @@ const URL = ENDPOINTS.NOTIFICACIONES;
 
 export async function registrarTokenEnServidor(expoPushToken, token) {
     try {
-        const response = await api.post(URL, { expo_token: expoPushToken }, {
+        const response = await api.post(URL, { token: expoPushToken }, {
             headers: {
                 'Authorization': `Bearer ${token}`,
             },

@@ -17,11 +17,11 @@ export const ENDPOINTS = {
     MENUS_ROL: 'menus/rol/',
     INVITADOS: 'invitados',
     NOTICIAS: 'noticias',
-    NOTIFICACIONES: 'expo/subscribe',
+    NOTIFICACIONES: 'expo/token',
     RESERVAS: 'reservas',
     SOLICITUDES: 'solicitudes',
     USUARIO: 'usuario/'
 }
 
-// export const URL_BACK = "https://1b148237b274.ngrok-free.app";
-export const URL_BACK = "https://www.apiclubsincelejo.prismau.co";
+// export const URL_BACK = "https://7521e373d41f.ngrok-free.app";
+export const URL_BACK = "https://apiclubsincelejo.prismau.com.co";
