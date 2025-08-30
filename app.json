@@ -2,7 +2,7 @@
   "expo": {
     "name": "PrismaU",
     "slug": "PrismaU-Club",
-    "version": "13.0.0",
+    "version": "14.0.0",
     "orientation": "portrait",
     "icon": "./assets/img/logo.png",
     "userInterfaceStyle": "light",
@@ -39,7 +39,7 @@
       },
       "package": "com.ticsoftdev.PrismaUIdClub",
       "googleServicesFile": "./google-services.json",
-      "versionCode": 13
+      "versionCode": 14
     },
     "web": {
       "favicon": "./assets/img/logo.png"

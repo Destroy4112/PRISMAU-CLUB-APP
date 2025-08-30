@@ -40,7 +40,7 @@ export async function getEntradas(token) {
         });
         return res.data;
     } catch (error) {
-        console.log(error.message);
+        console.log("Error al obtener las entradas", error.message);
         throw error.message;
     }
 };
@@ -54,7 +54,7 @@ export const updateEntrada = async (id, token) => {
         });
         return res.data;
     } catch (error) {
-        console.log(error.message);
+        console.log("Error al actualizar la entrada", error.message);
         throw error.message;
     }
 }

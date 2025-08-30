@@ -5,15 +5,15 @@ const URL = ENDPOINTS.ENTRADAS;
 
 export const createEntrada = async (id, token) => {
     try {
-        const res = await api.post(URL + id, {}, {
+        const res = await api.post(URL + "/" + id, {}, {
             headers: {
                 'Authorization': `Bearer ${token}`,
             },
         });
         return res.data;
     } catch (error) {
-        console.log(error.message);
-        throw error.message;
+        console.log("Error al crear la entrada", error.message);
+        throw error;
     }
 }
 

@@ -12,8 +12,8 @@ export default function DataResult({ data }) {
     }
 
     return (
-        <View style={tw`flex-1 justify-center items-center bg-white px-4 pb-5`}>
-            <View style={tw`mx-auto max-w-lg w-full bg-white rounded-lg shadow-md overflow-hidden`}>
+        <View style={tw`flex-1 justify-center items-center px-4 pb-5`}>
+            <View style={tw`mx-auto max-w-lg w-full rounded-lg shadow-md overflow-hidden`}>
                 <ScrollView contentContainerStyle={tw`flex-grow`}>
                     {
                         data.credenciales ?
@@ -52,7 +52,7 @@ export default function DataResult({ data }) {
                                         {
                                             data.user.familiar.map((item, index) => (
                                                 <View key={item.id || index}
-                                                    style={tw`flex-row items-center p-4 mb-3 rounded-xl bg-white}`}
+                                                    style={tw`flex-row items-center p-4 mb-3 rounded-full}`}
                                                 >
                                                     <View style={tw`mr-4`}>
                                                         <Image
@@ -86,7 +86,7 @@ export default function DataResult({ data }) {
                                 {
                                     (data.credenciales.Rol == 5) &&
                                     <View>
-                                        <View style={tw`flex-row items-center px-3 py-5 bg-white shadow`}>
+                                        <View style={tw`flex-row items-center px-3 py-5 shadow`}>
                                             <FontAwesome5 name="user" size={24} color="green" style={tw`mr-6 ml-2`} />
                                             <View style={tw`flex-1`}>
                                                 <Text style={tw`text-lg font-semibold`}>{data.user.relacionado.Nombre} {data.user.relacionado.Apellidos}</Text>
@@ -99,7 +99,7 @@ export default function DataResult({ data }) {
                                         {
                                             data.user.relacionado.familiares.map((item, index) => (
                                                 item.id != data.user.id &&
-                                                <View key={index} style={tw`flex-row items-center p-3 bg-white shadow`}>
+                                                <View key={index} style={tw`flex-row items-center p-3 shadow`}>
                                                     <FontAwesome5 name="user" size={24} color="green" style={tw`mr-6 ml-2`} />
                                                     <View style={tw`flex-1`}>
                                                         <Text style={tw`text-lg font-semibold`}>{item.Nombre} {item.Apellidos}</Text>
@@ -141,7 +141,7 @@ export default function DataResult({ data }) {
                                 </View>
                                 <View>
                                     <Text style={tw`text-lg text-green-700 px-5 font-bold mb-2`}>Invitado por</Text>
-                                    <View style={tw`flex-row items-center p-3 bg-white shadow`}>
+                                    <View style={tw`flex-row items-center p-3 shadow`}>
                                         <FontAwesome5 name="user" size={24} color="green" style={tw`mr-6 ml-2`} />
                                         <View style={tw`flex-1`}>
                                             <Text style={tw`text-lg font-semibold`}>{data.usuario_info.Nombre} {data.usuario_info.Apellidos}</Text>

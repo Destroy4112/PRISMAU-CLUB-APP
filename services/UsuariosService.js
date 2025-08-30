@@ -54,7 +54,7 @@ export const getUsuario = async (documento, token) => {
         });
         return res.data;
     } catch (error) {
-        console.log(error.message);
+        console.log("Error al obtener el usuario", error.message);
         throw error.message;
     }
 }

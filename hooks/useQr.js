@@ -34,25 +34,28 @@ export default function useQr() {
             const expired = vencimiento < new Date();
             setFechaVencimiento(vencimiento);
             setIsExpired(expired);
-            if (!expired) {
-                setRol(dataParse.rol);
-                if (dataParse.rol) {
-                    const res = await getUsuario(dataParse.usuario.documento, token);
+            if (expired) {
+                setData({});
+                return;
+            }
+            setRol(dataParse.rol);
+            if (dataParse.rol) {
+                const res = await getUsuario(dataParse.usuario.documento, token);
+                if (res.status) {
+                    await createEntrada(res.credenciales.id, token);
                     setData(res);
-                    await createEntrada(dataParse.usuario.user_id, token);
-                } else {
-                    setData(dataParse.usuario);
-                    await updateEntrada(dataParse.usuario.id, token);
                 }
             } else {
-                setData({});
+                setData(dataParse.usuario);
+                await updateEntrada(dataParse.usuario.id, token);
             }
+
         } catch (error) {
-            console.error('Error al procesar el código QR:', error);
-            alertWarning('Error al procesar el código QR', error.message);
+            alertWarning('Error al procesar el código QR', error);
             setData({});
+        } finally {
+            setIsLoading(false);
         }
-        setIsLoading(false);
     };
 
     const newScanner = () => {
