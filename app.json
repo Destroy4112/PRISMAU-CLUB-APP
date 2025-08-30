@@ -2,7 +2,7 @@
   "expo": {
     "name": "PrismaU",
     "slug": "PrismaU-Club",
-    "version": "14.0.0",
+    "version": "15.0.0",
     "orientation": "portrait",
     "icon": "./assets/img/logo.png",
     "userInterfaceStyle": "light",
@@ -39,7 +39,7 @@
       },
       "package": "com.ticsoftdev.PrismaUIdClub",
       "googleServicesFile": "./google-services.json",
-      "versionCode": 14
+      "versionCode": 15
     },
     "web": {
       "favicon": "./assets/img/logo.png"
@@ -51,7 +51,17 @@
     },
     "plugins": [
       "expo-font",
-      "expo-notifications"
+      "expo-notifications",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "targetSdkVersion": 35,
+            "compileSdkVersion": 35,
+            "kotlinVersion": "1.9.24"
+          }
+        }
+      ]
     ]
   }
 }
