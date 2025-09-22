@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
-import { useAuthContext } from '../context/AuthContext';
-import { createPreferencia, getMensualidadesUser } from '../services/MensualidadService';
-import { alertWarning } from '../utilities/toast/Toast';
+import { useAuthContext } from '../../../context/AuthContext';
+import { alertWarning } from '../../../utilities/toast/Toast';
+import { createPreferencia, getMensualidadesUser } from '../api/MensualidadService';
 
 export default function useMensualidades() {
     const { token, user, credenciales, socio } = useAuthContext();
@@ -93,7 +93,8 @@ export default function useMensualidades() {
             setMensualidades(data);
             applyFiltersAndSort(data);
         } catch (error) {
-            alertWarning("Error al obtener mensualidades", error.message || 'Error al obtener mensualidades.');
+            console.log(error)
+            alertWarning("Error al obtener mensualidades", error || 'Error al obtener mensualidades.');
         } finally {
             setLoading(false);
             setRefreshing(false);

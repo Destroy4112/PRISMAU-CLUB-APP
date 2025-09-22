@@ -6,7 +6,7 @@ import ModalMensualidades from '../../components/mensualidades/ModalMensualidade
 import Paginacion from '../../components/mensualidades/Paginacion';
 import PagoMensualidades from '../../components/mensualidades/PagoMensualidades';
 import Resumen from '../../components/mensualidades/Resumen';
-import useMensualidades from '../../hooks/useMensualidades';
+import useMensualidades from './hook/useMensualidades';
 
 export default function MensualidadScreen() {
     const { loading, refreshing, mensualidades, searchQuery, selectedFilter, sortBy, sortOrder, currentPage,

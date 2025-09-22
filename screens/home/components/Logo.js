@@ -1,7 +1,6 @@
-import React from 'react'
 import { Image, View } from 'react-native'
 import tw from 'tailwind-react-native-classnames'
-import imagenes from '../../assets/img/imagenes'
+import imagenes from '../../../assets/img/imagenes'
 
 export default function Logo() {
     return (
