@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ActivityIndicator, Text, View } from 'react-native';
 import tw from 'tailwind-react-native-classnames';
 import Carnet from '../../components/carnet/Carnet';
